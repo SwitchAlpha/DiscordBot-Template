@@ -4,5 +4,5 @@
 ## **Usage**
 ```js
 onlyChannels: ["CHANNEL ID", "CHANNEL ID"]
-returnOnlyChannels: true / false // Default: true
+returnOnlyChannelsError: true / false // Default: true [ OPTIONAL ]
 ```

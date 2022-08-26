@@ -4,7 +4,7 @@
 ```javascript
 module.exports = {
     name: "buttonName",
-    run: async(client, interaction, container) => {
+    run: async(client, interaction) => {
         // Do your dumb stuff.
     }
 }
@@ -12,12 +12,14 @@ module.exports = {
 ## **Example**
 ### **Button Code**
 ```javascript
-new container.Discord.MessageActionRow().addComponents(
-    new container.Discord.MessageButton()
-    .setCustomId('deleteButton')
-    .setLabel('Delete Output')
-    .setStyle('DANGER')
-    );
+const { ButtonBuilder, ActionRowBuilder } = require("discord.js")
+ const row = new ActionRowBuilder()
+            .addComponents(
+                new ButtonBuilder()
+                .setCustomId('deleteButton')
+                .setLabel('Delete Output')
+                .setStyle('Danger'),
+            );
 ```
 
 ### **deleteButton.js**
@@ -25,7 +27,7 @@ new container.Discord.MessageActionRow().addComponents(
 module.exports = {
     name: "deleteButton",
     ownerOnly: true,
-    run: async(client, interaction, container) => {
+    run: async(client, interaction) => {
         interaction.message.delete()
     }
 }

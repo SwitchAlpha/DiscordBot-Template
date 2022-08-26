@@ -4,5 +4,5 @@
 ## **Usage**
 ```js
 onlyGuilds: ["GUILD ID", "GUILD ID"]
-returnOnlyGuilds: true / false // Default: true
+returnOnlyGuildsError: true / false // Default: true [ OPTIONAL ]
 ```

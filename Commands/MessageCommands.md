@@ -3,7 +3,7 @@
 ```javascript
 module.exports = {
     name: "cmdname",
-    run: async(client, message, args, container) => {
+    run: async(client, message, args) => {
         //Do stuff
     }
 }
@@ -13,7 +13,7 @@ module.exports = {
 ```javascript
 module.exports = {
     name: "ping",
-    run: async(client, message, args, container) => {
+    run: async(client, message, args) => {
         message.channel.send({
             content: `My ping is ${client.ws.ping}ms.`
         })

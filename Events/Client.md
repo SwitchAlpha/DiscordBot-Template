@@ -7,6 +7,7 @@
 ```javascript
 module.exports = {
     name: "eventName",
+    runOnce: false, // Whether to run the event only once.
     run: async(<args>) => {
         //Code
     }
@@ -17,7 +18,7 @@ module.exports = {
 ```javascript
 module.exports = {
     name: "messageUpdate",
-    run: async(oldMessage, newMessage, client, container) => {
+    run: async(client, oldMessage, newMessage) => {
         //Your code
     }
 }

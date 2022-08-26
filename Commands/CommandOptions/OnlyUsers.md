@@ -4,5 +4,5 @@
 ## **Usage**
 ```js
 onlyUsers: ["USER ID", "USER ID"]
-returnOnlyUsers: true / false // Default: true
+returnOnlyUsersError: true / false // Default: true [ OPTIONAL ]
 ```
